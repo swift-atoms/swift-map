@@ -1,4 +1,3 @@
-/// A typed transformation of one value into another, independent of parsing.
 @frozen
 public struct Map<
     Source: ~Copyable & ~Escapable,
