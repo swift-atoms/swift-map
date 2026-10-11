@@ -2,7 +2,7 @@
 public struct Map<
     Source: ~Copyable & ~Escapable,
     Target: ~Copyable & ~Escapable,
-    Failure: Swift.Error
+    Failure: Swift::Error
 > {
 
     public let transform: @_lifetime(captures, copy source)
@@ -15,7 +15,9 @@ public struct Map<
     ) {
         self.transform = transform
     }
+}
 
+extension Map where Source: ~Copyable & ~Escapable, Target: ~Copyable & ~Escapable {
     @inlinable
     @_lifetime(borrow self, copy source)
     public borrowing func callAsFunction(_ source: consuming Source) throws(Failure) -> Target {

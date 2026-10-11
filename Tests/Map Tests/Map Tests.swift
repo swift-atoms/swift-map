@@ -30,5 +30,5 @@ struct `Map transforms values independently` {
         #expect(result[1] == 20)
     }
 
-    private enum Rejected: Swift.Error { case negative }
+    private enum Rejected: Swift::Error { case negative }
 }
